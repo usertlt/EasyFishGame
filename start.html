@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <link rel="stylesheet" href="css/template.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Start game</title>
+<script language="JavaScript" src="js/jquery-latest.min.js"></script>
+<script language="JavaScript" src="js/accordeon.js"></script>
+		
+</head>
+<body>
+<!--передача данных имя на 2-ю страницу-->
+<script language="javascript" type="text/javascript">
+    function goMail() { 
+encodeURIComponent(document.location.href = "play.html?id=" + document.getElementById("userName").value);
+ }
+</script>
+	<div class="game">
+		<h1>Fishing Game</h1>
+		<form>
+  			<input id="userName" type="text" placeholder="Name" name="userName" onkeyup="check();">
+  			<br>
+ 			<input type="button" value="Start" id="button" disabled="disabled" onclick="goMail()" />
+		</form>
+
+<div id="accordeon">
+      <div class="acc-head">
+        Инструкция
+      </div>
+      <div class="acc-body">
+        Цель игры - получить как можно больше баллов за определенное время. При клике на маленькую рыбку зачисляется 30 очков, на среднюю – 20, на большую – 10.
+      </div>
+
+    </div>
+	
+	</div>
+</body>
+</html>
